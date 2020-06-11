@@ -170,6 +170,21 @@ class TestRail {
     }
 
     /**
+     * Publishes results of execution of an automated test run to a specific run
+     * @param {[]} results
+     * @param {string} runId
+     * @param {callback} callback
+     */
+    publishToRun(results, runId, callback = undefined) {
+		console.log(`Results published to ${this.base}?/runs/view/${runId}`);
+		let body = this.addResultsForCases(runId, results);
+		// execute callback if specified
+		if (callback) {
+			callback(body);
+		}
+    }
+
+    /**
      * @param {number} runId
      * @param {{case_id, status_id, comment}[]} results
      * @return {*}
