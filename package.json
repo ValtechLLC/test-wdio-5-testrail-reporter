@@ -42,7 +42,7 @@
     "webdriver",
     "wdio",
     "wdio-reporter",
-	"testrail"
+    "testrail"
   ],
   "license": "MIT",
   "main": "./build/index",
@@ -60,5 +60,5 @@
   "scripts": {
     "generate-cases": "node scripts/generate-cases.js"
   },
-  "version": "0.0.3"
+  "version": "0.1.0"
 }
